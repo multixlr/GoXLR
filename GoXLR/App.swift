@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct GoXLRApp: App {
+struct GoXLR: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
