@@ -149,4 +149,5 @@ DerivedData/
 
 ## Xcodegen
 *.pbxproj
+*.xcodeproj
 *.xcodeproj/
