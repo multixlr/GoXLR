@@ -10,7 +10,7 @@ options:
   groupOrdering:
     - order: [GoXLR]
     - pattern: 'GoXLR'
-      order: [View, Extensions, Resources, Preview Content]
+      order: [View, Extensions, Resources]
     - pattern: 'View'
       order: [Root]
     - pattern: 'Resources'
@@ -37,6 +37,8 @@ targets:
     platform: macOS
     sources:
       - GoXLR
+      - path: GoXLR/Resources/Utility/Daemon/goxlr-daemon
+        buildPhase: resources
     dependencies:
       - package: CoreKit
     entitlements:

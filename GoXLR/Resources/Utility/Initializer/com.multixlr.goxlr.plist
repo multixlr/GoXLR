@@ -5,11 +5,11 @@
 	<key>KeepAlive</key>
 	<false/>
 	<key>Label</key>
-	<string>GoXLR Mini</string>
+	<string>com.multixlr.goxlr</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Library/Application Support/com.eduardshugar.goxlr/xpchandler</string>
-		<string>/Library/Application Support/com.eduardshugar.goxlr/goxlr-initialiser</string>
+		<string>/Library/Application Support/com.multixlr.goxlr/xpchandler</string>
+		<string>/Library/Application Support/com.multixlr.goxlr/goxlr-initialiser</string>
 	</array>
 	<key>LaunchEvents</key>
 	<dict>
@@ -20,7 +20,7 @@
 				<key>idVendor</key>
 				<integer>4640</integer>
 				<key>idProduct</key>
-				<integer>36836</integer>
+				<integer>36832</integer>
 				<key>IOProviderClass</key>
 				<string>IOUSBDevice</string>
 				<key>IOMatchStream</key>

@@ -1,39 +1,39 @@
+import CoreKit
 import SwiftUI
 
 @main
 struct GoXLR: App {
-    @Environment(\.scenePhase) var state
-
+    private let app = App()
+    
     var body: some Scene {
         MenuBarExtra {
-            VStack(alignment: .center) {
-                Text("Hello, world!")
-                    .bold()
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .onChange(of: state) { state in
-                        switch state {
-                        case .active:
-                            print("App is active")
-                        case .inactive:
-                            print("App is inactive")
-                        case .background:
-                            print("App is in background")
-                        @unknown default:
-                            print("App is in unknown state")
-                        }
-                    }
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
             }
         } label: {
-            Image(systemName: "1.circle")
+            Image(.icon_menubar)
         }
     }
-    
-    init() {
-        start()
+}
+
+extension GoXLR {
+    fileprivate class App {
+        internal init() {
+            setup()
+        }
+        
+        private func setup() {
+            bridges()
+        }
+        private func bridges() {
+            Core.shared.initialize(with: self)
+        }
     }
-    
-    private func start() {
-        print("start called")
-    }
+}
+
+extension GoXLR.App: AppBridge {
+    internal func notifications() async -> CoreKit.Notifications.State { .unknown }
+    internal func requestNotifications() {}
+    internal func app(state: CoreKit.System.App.State) {}
+    internal func user(state: CoreKit.System.User.State) {}
 }
