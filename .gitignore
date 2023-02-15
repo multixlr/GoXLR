@@ -146,5 +146,7 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+## Xcodegen
 *.pbxproj
 *.xcodeproj/
