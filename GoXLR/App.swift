@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct GoXLR: App {
+    @State var currentNumber: String = "1"
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            VStack(alignment: .center) {
+                Text("Hello, world!")
+                    .bold()
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+            }
+        } label: {
+            Image(systemName: "1.circle")
         }
+
     }
 }

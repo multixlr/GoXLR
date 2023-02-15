@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		64D9BD77299C529F00636D94 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9BD76299C529F00636D94 /* App.swift */; };
-		64D9BD79299C529F00636D94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9BD78299C529F00636D94 /* ContentView.swift */; };
 		64D9BD7B299C52A000636D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D9BD7A299C52A000636D94 /* Assets.xcassets */; };
 		64D9BD7E299C52A000636D94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D9BD7D299C52A000636D94 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,10 +15,10 @@
 /* Begin PBXFileReference section */
 		64D9BD73299C529F00636D94 /* GoXLR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoXLR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D9BD76299C529F00636D94 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		64D9BD78299C529F00636D94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64D9BD7A299C52A000636D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D9BD7D299C52A000636D94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64D9BD7F299C52A000636D94 /* GoXLR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoXLR.entitlements; sourceTree = "<group>"; };
+		64DDBD45299C561600B9BD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +51,8 @@
 		64D9BD75299C529F00636D94 /* GoXLR */ = {
 			isa = PBXGroup;
 			children = (
+				64DDBD45299C561600B9BD9C /* Info.plist */,
 				64D9BD76299C529F00636D94 /* App.swift */,
-				64D9BD78299C529F00636D94 /* ContentView.swift */,
 				64D9BD7A299C52A000636D94 /* Assets.xcassets */,
 				64D9BD7F299C52A000636D94 /* GoXLR.entitlements */,
 				64D9BD7C299C52A000636D94 /* Preview Content */,
@@ -139,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D9BD79299C529F00636D94 /* ContentView.swift in Sources */,
 				64D9BD77299C529F00636D94 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +272,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoXLR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GoXLR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,8 +303,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoXLR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GoXLR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
