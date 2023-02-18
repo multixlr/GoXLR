@@ -10,17 +10,9 @@ options:
   groupOrdering:
     - order: [GoXLR]
     - pattern: 'GoXLR'
-      order: [View, Extensions, Resources]
-    - pattern: 'View'
-      order: [Root]
+      order: [App, View, Resources]
     - pattern: 'Resources'
-      order: [App, Interface, Utility]
-    - pattern: 'App'
-      order: [Root, Info, Settings]
-    - pattern: 'Interface'
-      order: [Assets, Typography]
-    - pattern: 'Utility'
-      order: [Daemon, Initializer]
+      order: [Settings, Extensions, Interface, Info, Utilities]
 
 settings:
   MARKETING_VERSION: "1.0.0"
@@ -29,6 +21,9 @@ settings:
 packages:
   CoreKit:
     url: https://github.com/multixlr/CoreKit.git
+    branch: main
+  AudioKit:
+    url: https://github.com/multixlr/AudioKit.git
     branch: main
 
 targets:
@@ -41,8 +36,9 @@ targets:
         buildPhase: resources
     dependencies:
       - package: CoreKit
+      - package: AudioKit
     entitlements:
-      path: GoXLR/Resources/GoXLR.entitlements
+      path: GoXLR/Resources/Info/GoXLR.entitlements
       properties:
         com.apple.security.app-sandbox: true
         com.apple.security.cs.allow-unsigned-executable-memory: true
@@ -54,11 +50,11 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: 'com.multixlr.goxlr'
         DEVELOPMENT_TEAM: KVH9XSM27S
         CODE_SIGN_STYLE: Automatic
-        INFOPLIST_FILE: GoXLR/Resources/App/Info/Info.plist
+        INFOPLIST_FILE: GoXLR/Resources/Info/Info.plist
       configs:
         Debug:
           SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
-          CODE_SIGN_ENTITLEMENTS: GoXLR/Resources/GoXLR.entitlements
+          CODE_SIGN_ENTITLEMENTS: GoXLR/Resources/Info/GoXLR.entitlements
         Release:
-          CODE_SIGN_ENTITLEMENTS: GoXLR/Resources/GoXLR.entitlements
+          CODE_SIGN_ENTITLEMENTS: GoXLR/Resources/Info/GoXLR.entitlements
       

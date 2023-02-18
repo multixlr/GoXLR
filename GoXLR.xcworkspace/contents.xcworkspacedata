@@ -5,6 +5,9 @@
       location = "group:../CoreKit">
    </FileRef>
    <FileRef
+      location = "group:../AudioKit">
+   </FileRef>
+   <FileRef
       location = "container:GoXLR.xcodeproj">
    </FileRef>
 </Workspace>
