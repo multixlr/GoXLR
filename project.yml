@@ -32,17 +32,13 @@ targets:
     platform: macOS
     sources:
       - GoXLR
-      - path: GoXLR/Resources/Utility/Daemon/goxlr-daemon
-        buildPhase: resources
     dependencies:
       - package: CoreKit
       - package: AudioKit
     entitlements:
       path: GoXLR/Resources/Info/GoXLR.entitlements
       properties:
-        com.apple.security.app-sandbox: true
-        com.apple.security.cs.allow-unsigned-executable-memory: true
-        com.apple.security.files.user-selected.read-only: true
+        com.apple.security.app-sandbox: false
     settings:
       base:
         PRODUCT_NAME: GoXLR
@@ -50,6 +46,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: 'com.multixlr.goxlr'
         DEVELOPMENT_TEAM: KVH9XSM27S
         CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY[sdk=macosx*]: "-"
         INFOPLIST_FILE: GoXLR/Resources/Info/Info.plist
       configs:
         Debug:
