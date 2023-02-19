@@ -10,7 +10,9 @@ options:
   groupOrdering:
     - order: [GoXLR]
     - pattern: 'GoXLR'
-      order: [App, View, Resources]
+      order: [App, Resources]
+    - pattern: 'App'
+      order: [Root, View]
     - pattern: 'Resources'
       order: [Settings, Extensions, Interface, Info, Utilities]
 

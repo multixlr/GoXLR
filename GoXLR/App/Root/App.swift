@@ -5,26 +5,13 @@ import AudioKit
 @main
 struct GoXLR: App {
     private let app = App()
-    
-    @Environment(\.openURL) var openURL
-    
+        
     var body: some Scene {
         MenuBarExtra {
-            Button("Configure") {
-                configure()
-            }
-            Divider()
-            Button("Quit") {
-                NSApplication.shared.terminate(nil)
-            }
+            Content()
         } label: {
             Image(.icon_menubar)
         }
-    }
-    
-    private func configure() {
-        guard let url = URL.configuration else { return }
-        openURL(url)
     }
 }
 
